@@ -1,107 +1,22 @@
 extends ../layouts/default
 
+block intro
+	.container
+	.page-header
+		h1.text-center References
 block content
-    .container
-    .page-header
-        h1.text-center References
-   // .container(style='padding-top: 60px')
-    .row.portfolio
-        .col-sm-6.col-md-3
-            .thumbnail
-                img.img-responsive(src='http://lorempixel.com/600/400/cats/?1', alt='The awesome description', data-toggle='modal', data-target='#myModal')
-                .caption
-                    p.btn.btn-default.btn-xs.btn-lg.pull-right(rel='tooltip')
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart-o
-                        i.fa.fa-heart-o
-                    .clearfix
-        .col-sm-6.col-md-3
-            .thumbnail
-                img.img-responsive(src='http://lorempixel.com/600/400/cats/?2', alt='The awesome description', data-toggle='modal', data-target='#myModal')
-                .caption
-                    p.btn.btn-default.btn-xs.pull-right(rel='tooltip')
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart-o
-                    .clearfix
-        .col-sm-6.col-md-3
-            .thumbnail
-                img.img-responsive(src='http://lorempixel.com/600/400/cats/?3', alt='The awesome description', data-toggle='modal', data-target='#myModal')
-                .caption
-                    p.btn.btn-default.btn-xs.pull-right(rel='tooltip')
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart-o
-                        i.fa.fa-heart-o
-                    .clearfix
-        .col-sm-6.col-md-3
-            .thumbnail
-                img.img-responsive(src='http://lorempixel.com/600/400/cats/?4', alt='The awesome description', data-toggle='modal', data-target='#myModal')
-                .caption
-                    p.btn.btn-default.btn-xs.pull-right(rel='tooltip')
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart-o
-                        i.fa.fa-heart-o
-                        i.fa.fa-heart-o
-                    .clearfix
-        .col-sm-6.col-md-3
-            .thumbnail
-                img.img-responsive(src='http://lorempixel.com/600/400/cats/?5', alt='The awesome description', data-toggle='modal', data-target='#myModal')
-                .caption
-                    p.btn.btn-default.btn-xs.pull-right(rel='tooltip')
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart-o
-                        i.fa.fa-heart-o
-                    .clearfix
-        .col-sm-6.col-md-3
-            .thumbnail
-                img.img-responsive(src='http://lorempixel.com/600/400/cats/?6', alt='The awesome description', data-toggle='modal', data-target='#myModal')
-                .caption
-                    p.btn.btn-default.btn-xs.pull-right(rel='tooltip')
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart-o
-                    .clearfix
-        .col-sm-6.col-md-3
-            .thumbnail
-                img.img-responsive(src='http://lorempixel.com/600/400/cats/?7', alt='The awesome description', data-toggle='modal', data-target='#myModal')
-                .caption
-                    p.btn.btn-default.btn-xs.pull-right(rel='tooltip')
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart-o
-                        i.fa.fa-heart-o
-                    .clearfix
-        .col-sm-6.col-md-3
-            .thumbnail
-                img.img-responsive(src='http://lorempixel.com/600/400/cats/?8', alt='The awesome description', data-toggle='modal', data-target='#myModal')
-                .caption
-                    p.btn.btn-default.btn-xs.pull-right(rel='tooltip')
-                        i.fa.fa-heart
-                        i.fa.fa-heart
-                        i.fa.fa-heart-o
-                        i.fa.fa-heart-o
-                        i.fa.fa-heart-o
-                    .clearfix
-        // Modal
-        #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-            .modal-dialog
-                .modal-content
-                    .modal-header
-                        button.close(type='button', data-dismiss='modal')
-                            span(aria-hidden='true') &times;
-                            span.sr-only Close
-                        h4#myModalLabel.modal-title Im the awesome cat!
-                    .modal-body
-                        img.img-responsive(src='http://lorempixel.com/600/400/cats/?42', alt='The awesome description')
+	.container
+		if references.length
+		each reference, i in references
+			.row
+				.col-md-7
+					each image, i in reference.image
+						img.img-responsive(src=image.fill(700,300),alt=reference.name + ' image ' + (i+1)).img-thumbnail
+				.col-md-5
+					h3=reference.name
+					p #{reference.description}
+					a.btn.btn-primary(href=reference.linkaddress,target='_blank')
+						|View Project
+		else
+			.jumbotron.text-center
+				h3(style="margin-bottom:0;margin-top:0;") There are no References yet.
