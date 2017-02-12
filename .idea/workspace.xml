@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2889cb82-d948-4094-8e82-6ecd7bd5cb75" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/index.jade" afterPath="$PROJECT_DIR$/templates/views/index.jade" />
-    </list>
+    <list default="true" id="2889cb82-d948-4094-8e82-6ecd7bd5cb75" name="Default" comment="" />
     <ignored path="berthuys.be.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
