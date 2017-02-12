@@ -46,7 +46,7 @@
       <file leaf-file-name="references.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/references.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="39" selection-start="571" selection-end="571" vertical-scroll-proportion="0.42889908" vertical-offset="0" max-vertical-offset="872">
+            <state line="22" column="29" selection-start="552" selection-end="552" vertical-scroll-proportion="0.42889908" vertical-offset="0" max-vertical-offset="872">
               <folding />
             </state>
           </provider>
@@ -535,7 +535,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/references.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="39" selection-start="571" selection-end="571" vertical-scroll-proportion="0.42889908" vertical-offset="0" max-vertical-offset="872">
+        <state line="22" column="29" selection-start="552" selection-end="552" vertical-scroll-proportion="0.42889908" vertical-offset="0" max-vertical-offset="872">
           <folding />
         </state>
       </provider>
