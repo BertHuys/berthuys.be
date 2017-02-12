@@ -47,7 +47,6 @@ keystone.set('nav', {
 	galleries: 'galleries',
 	users: 'users',
 });
-
 // Start Keystone to connect to your database and initialise the web server
 
 keystone.start();
